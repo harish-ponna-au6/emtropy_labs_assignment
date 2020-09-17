@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import queryString from "query-string";
 import { withRouter } from "react-router-dom";
-
-import "../styles/Pagination.css";
 import { settingPage } from "../redux/actions";
 
-function Pagination(props) {
+import "../styles/Pagination.css";
+
+const Pagination = (props) => {
   const {
     history: { push },
     location: { search },
@@ -15,8 +15,8 @@ function Pagination(props) {
     page,
   } = props;
 
-  console.log({ search, props });
   const { q, category } = queryString.parse(search);
+
   const handleClick = () => {
     let route;
     if (category) route = `category=${category}`;
@@ -29,7 +29,7 @@ function Pagination(props) {
     if (category) route = `category=${category}`;
     else route = `q=${q}`;
     push(`/topheadlines?${route}&page=${page}`);
-  }, [page]);
+  }, [page, category, q, push]);
 
   return (
     <div className="Pagination">
@@ -57,7 +57,7 @@ function Pagination(props) {
       </div>
     </div>
   );
-}
+};
 
 export default connect(
   (state) => ({ totalResults: state.totalResults, page: state.page }),

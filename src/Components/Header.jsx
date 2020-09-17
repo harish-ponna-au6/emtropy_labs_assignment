@@ -7,9 +7,11 @@ function Header(props) {
   const {
     location: { search },
   } = props;
+
   const [state, setstate] = useState("science");
 
   const { category } = queryString.parse(search);
+
   useEffect(() => {
     setstate(category);
   }, [category]);

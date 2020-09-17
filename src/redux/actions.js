@@ -1,5 +1,11 @@
 import Axios from "axios";
-import { IS_LOADING, FETCHING_ARTICLES, SETTING_PAGE } from "./actionTypes";
+import {
+  IS_LOADING,
+  FETCHING_ARTICLES,
+  SETTING_PAGE,
+  SET_HIDE,
+  SET_LIKE,
+} from "./actionTypes";
 
 export const fetchingArticles = ({
   category,
@@ -30,3 +36,5 @@ export const fetchingArticles = ({
 
 export const isLoading = () => ({ type: IS_LOADING });
 export const settingPage = (value) => ({ type: SETTING_PAGE, payload: value });
+export const setLike = (payload) => ({ type: SET_LIKE, payload });
+export const setHide = (payload) => ({ type: SET_HIDE, payload });
