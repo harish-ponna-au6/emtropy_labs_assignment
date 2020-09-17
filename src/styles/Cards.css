@@ -1,0 +1,36 @@
+.Cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Cards .card img {
+  height: 200px;
+  width: 180px;
+}
+.Cards .card {
+  font-size: 14px;
+  width: 180px;
+  word-break: break-all;
+  min-height: 350px;
+  margin: 20px;
+  padding: 7px;
+  border: 1px solid rgb(231, 228, 228);
+  transition-duration: 300ms;
+}
+.Cards .card:hover {
+  box-shadow: 0px 0px 5px #a56969;
+}
+
+.Cards .card p {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 520px) {
+  .Cards .card {
+    margin-top: 10px;
+    width: 240px;
+  }
+  .Cards .card img {
+    width: 240px;
+  }
+}

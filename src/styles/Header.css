@@ -1,0 +1,26 @@
+.Header {
+  display: flex;
+  align-items: stretch;
+}
+.Header a {
+  flex: 1;
+  text-decoration: none;
+  color: black;
+}
+.Header div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid grey;
+  padding: 5px 6px;
+}
+
+.Header div.active {
+  background-color: #3832328f;
+  color: white;
+}
+
+.Header div:not(.active):hover {
+  background-color: #38323221;
+}

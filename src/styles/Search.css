@@ -1,0 +1,17 @@
+.Search {
+  display: flex;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.Search > input {
+  margin-left: auto;
+  padding: 5px;
+}
+
+.Search > input:focus {
+  outline: none;
+}
+.Search button {
+  cursor: pointer;
+}
